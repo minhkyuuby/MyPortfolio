@@ -1,0 +1,366 @@
+.see-portfolio-btn,
+.see-portfolio-btn::after {
+ padding: 16px 20px;
+ font-size: 18px;
+ background: linear-gradient(45deg, transparent 5%, #ff013c 5%);
+ border: 0;
+ color: #fff;
+ letter-spacing: 3px;
+ line-height: 1;
+ box-shadow: 6px 0px 0px #00e6f6;
+ outline: transparent;
+ position: relative;
+ text-decoration: none;
+}
+
+.see-portfolio-btn::after {
+ --slice-0: inset(50% 50% 50% 50%);
+ --slice-1: inset(80% -6px 0 0);
+ --slice-2: inset(50% -6px 30% 0);
+ --slice-3: inset(10% -6px 85% 0);
+ --slice-4: inset(40% -6px 43% 0);
+ --slice-5: inset(80% -6px 5% 0);
+ content: "HOVER ME";
+ display: block;
+ position: absolute;
+ top: 0;
+ left: 0;
+ right: 0;
+ bottom: 0;
+ background: linear-gradient(45deg, transparent 3%, #00e6f6 3%, #00e6f6 5%, #ff013c 5%);
+ text-shadow: -3px -3px 0px #f8f005, 3px 3px 0px #00e6f6;
+ clip-path: var(--slice-0);
+}
+
+.see-portfolio-btn:hover::after {
+ animation: 1s glitch;
+ animation-timing-function: steps(2, end);
+}
+
+@keyframes glitch {
+ 0% {
+  clip-path: var(--slice-1);
+  transform: translate(-20px, -10px);
+ }
+
+ 10% {
+  clip-path: var(--slice-3);
+  transform: translate(10px, 10px);
+ }
+
+ 20% {
+  clip-path: var(--slice-1);
+  transform: translate(-10px, 10px);
+ }
+
+ 30% {
+  clip-path: var(--slice-3);
+  transform: translate(0px, 5px);
+ }
+
+ 40% {
+  clip-path: var(--slice-2);
+  transform: translate(-5px, 0px);
+ }
+
+ 50% {
+  clip-path: var(--slice-3);
+  transform: translate(5px, 0px);
+ }
+
+ 60% {
+  clip-path: var(--slice-4);
+  transform: translate(5px, 10px);
+ }
+
+ 70% {
+  clip-path: var(--slice-2);
+  transform: translate(-10px, 10px);
+ }
+
+ 80% {
+  clip-path: var(--slice-5);
+  transform: translate(20px, -10px);
+ }
+
+ 90% {
+  clip-path: var(--slice-1);
+  transform: translate(-10px, 0px);
+ }
+
+ 100% {
+  clip-path: var(--slice-1);
+  transform: translate(0);
+ }
+}
+
+.masthead-img-avt {
+    max-width: 80px;
+    border-radius: 50%;
+    background: greenyellow;
+    box-shadow: 0 0 100px greenyellow;
+    margin-right: 10px;
+}
+
+/* Download Button */
+.download-btn {
+    margin-inline-end: 20px;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    border: none;
+    background: none;
+    color: #0f1923;
+    cursor: pointer;
+    position: relative;
+    padding: 8px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 14px;
+    transition: all .15s ease;
+}
+
+.download-btn::before,
+.download-btn::after {
+content: '';
+display: block;
+position: absolute;
+right: 0;
+left: 0;
+height: calc(50% - 5px);
+border: 1px solid #7D8082;
+transition: all .15s ease;
+}
+
+.download-btn::before {
+top: 0;
+border-bottom-width: 0;
+}
+
+.download-btn::after {
+bottom: 0;
+border-top-width: 0;
+}
+
+.download-btn:active,
+.download-btn:focus {
+outline: none;
+}
+
+.download-btn:active::before,
+.download-btn:active::after {
+right: 3px;
+left: 3px;
+}
+
+.download-btn:active::before {
+top: 3px;
+}
+
+.download-btn:active::after {
+bottom: 3px;
+}
+
+.download-button_lg {
+position: relative;
+display: block;
+padding: 10px 20px;
+color: #fff;
+background-color: #0f1923;
+overflow: hidden;
+box-shadow: inset 0px 0px 0px 1px transparent;
+}
+
+.download-button_lg::before {
+content: '';
+display: block;
+position: absolute;
+top: 0;
+left: 0;
+width: 2px;
+height: 2px;
+background-color: #0f1923;
+}
+
+.download-button_lg::after {
+content: '';
+display: block;
+position: absolute;
+right: 0;
+bottom: 0;
+width: 4px;
+height: 4px;
+background-color: #0f1923;
+transition: all .2s ease;
+}
+
+.download-button_sl {
+display: block;
+position: absolute;
+top: 0;
+bottom: -1px;
+left: -8px;
+width: 0;
+background-color: #ff4655;
+transform: skew(-15deg);
+transition: all .2s ease;
+}
+
+.download-btn_text {
+position: relative;
+}
+
+.download-btn:hover {
+color: #0f1923;
+}
+
+.download-btn:hover .download-button_sl {
+width: calc(100% + 15px);
+}
+
+.download-btn:hover .download-button_lg::after {
+background-color: #fff;
+}
+
+/* Close Button */
+.close-port-btn {
+    margin-inline-end: 15px;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    border: none;
+    background: none;
+    color: #0f1923;
+    cursor: pointer;
+    position: relative;
+    padding: 8px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 14px;
+    transition: all .15s ease;
+}
+
+.close-port-btn::before,
+.close-port-btn::after {
+content: '';
+display: block;
+position: absolute;
+right: 0;
+left: 0;
+height: calc(50% - 5px);
+border: 1px solid #7D8082;
+transition: all .15s ease;
+}
+
+.close-port-btn::before {
+top: 0;
+border-bottom-width: 0;
+}
+
+.close-port-btn::after {
+bottom: 0;
+border-top-width: 0;
+}
+
+.close-port-btn:active,
+.close-port-btn:focus {
+outline: none;
+}
+
+.close-port-btn:active::before,
+.close-port-btn:active::after {
+right: 3px;
+left: 3px;
+}
+
+.close-port-btn:active::before {
+top: 3px;
+}
+
+.close-port-btn:active::after {
+bottom: 3px;
+}
+
+.close-port-button_lg {
+position: relative;
+display: block;
+padding: 10px 20px;
+color: #fff;
+background-color: #0f1923;
+overflow: hidden;
+box-shadow: inset 0px 0px 0px 1px transparent;
+}
+
+.close-port-button_lg::before {
+content: '';
+display: block;
+position: absolute;
+top: 0;
+left: 0;
+width: 2px;
+height: 2px;
+background-color: #0f1923;
+}
+
+.close-port-button_lg::after {
+content: '';
+display: block;
+position: absolute;
+right: 0;
+bottom: 0;
+width: 4px;
+height: 4px;
+background-color: #0f1923;
+transition: all .2s ease;
+}
+
+.close-port-button_sl {
+display: block;
+position: absolute;
+top: 0;
+bottom: -1px;
+left: -8px;
+width: 0;
+background-color: #4681ff;
+transform: skew(-15deg);
+transition: all .2s ease;
+}
+
+.close-port-btn_text {
+position: relative;
+}
+
+.close-port-btn:hover {
+color: #0f1923;
+}
+
+.close-port-btn:hover .close-port-button_sl {
+width: calc(100% + 15px);
+}
+
+.close-port-btn:hover .close-port-button_lg::after {
+background-color: #fff;
+}
+
+/* PORTFOLIO */
+.portfolio-item-description {
+    text-align: justify;
+    margin-top: 15px;
+}
+
+.portfolio-subtitle {
+    margin-top: 20px;
+    font-size: 25px;
+}
+
+.modal-dialog {
+    max-width: 1200px!important;
+    margin: auto!important;
+    margin-top: 15px!important;
+}
+
+.text-left {
+    text-align: left;
+}
